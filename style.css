@@ -6,7 +6,7 @@
 
 :root {
   --text-color: black;
-  --bg-url: url(./assets/bg-desktop-light.jpg);
+  --bg-url: url(./assets/bg-mobile-light.jpg);
   --stroke-color: rgba(0, 0, 0, 0.5);
   --surface-color: rgba(0, 0, 0, 0.05);
   --description-color: rgba(0, 0, 0, 0.8);
@@ -17,7 +17,7 @@
 
 .dark {
   --text-color: white;
-  --bg-url: url(./assets/bg-desktop.jpg);
+  --bg-url: url(./assets/bg-mobile.jpg);
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.1);
   --description-color: rgba(255, 255, 255, 0.8);
@@ -27,7 +27,7 @@
 
 body {
   background: var(--bg-url) no-repeat top center/cover;
-  padding: 56px;
+  height: 100vh;
 }
 
 body * {
@@ -45,7 +45,7 @@ p {
   width: 100%;
   max-width: 588px;
   margin: 56px auto 0px auto;
-  padding: 0 24px;  
+  padding: 0 24px;
 }
 
 #profile {
@@ -130,4 +130,14 @@ ul li a {
 ul li a:hover {
   background: var(--surface-color-hover);
   border: 1.5px solid var(--text-color);
+}
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+
+  .dark {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
 }

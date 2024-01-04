@@ -32,6 +32,10 @@ body {
   height: 100vh;
 }
 
+img {
+  border-radius: 50%;
+}
+
 body * {
   font-family: "Inter", sans-serif;
   color: var(--text-color);
